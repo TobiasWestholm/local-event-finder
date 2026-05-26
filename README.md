@@ -1,12 +1,12 @@
-# Local event finder - Codex native
+# Local event finder
 
-A Codex-native runtime for discovering, scoring, and shortlisting events from user-provided preferences.
+A coding agent plugin for discovering, scoring, and shortlisting events from user-provided preferences.
 
 Supports optional calendar integration.
 
 ## Setup
 
-Open this folder in Codex and copy the prompt below. Replace the FILL IN YOUR PREFERENCE text with your actual preferences before sending it.
+Open this folder in your coding agent and copy the prompt below. Replace the FILL IN YOUR PREFERENCE text with your actual preferences before sending it.
 
 ```text
 Set up this event scanner runtime for me.
