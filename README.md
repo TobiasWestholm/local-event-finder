@@ -1,6 +1,6 @@
 # Event Scanner
 
-A agent skill for discovering, scoring, and shortlisting local events matched to your taste profile.
+An agent skill for discovering, scoring, and shortlisting local events matched to your taste profile.
 
 Supports optional Google Calendar integration for availability checks and adding events.
 
