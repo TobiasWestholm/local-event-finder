@@ -5,9 +5,9 @@ Evaluate candidate events against preferences, availability rules, date-window p
 ## Inputs
 
 - Candidate events from step-1-discovery.
-- `.agents/skills/event-scanner/assets/taste-profile.md`.
-- `.agents/skills/event-scanner/references/scoring-rubric.md`.
-- `.agents/skills/event-scanner/references/availability-rules.md`.
+- `skills/event-scanner/assets/taste-profile.md`.
+- `skills/event-scanner/references/scoring-rubric.md`.
+- `skills/event-scanner/references/availability-rules.md`.
 
 ## Procedure
 

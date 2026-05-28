@@ -8,9 +8,9 @@ Adjust event practicality using calendar availability context.
 - Event date/time and expected duration.
 - Calendar availability context, when available or provided by the user.
 - Google Calendar availability lookup, when the connector is available.
-- `.agents/skills/event-scanner/references/privacy-and-access.md`.
-- `.agents/skills/event-scanner/references/availability-rules.md`.
-- `.agents/skills/event-scanner/references/scoring-rubric.md`.
+- `skills/event-scanner/references/privacy-and-access.md`.
+- `skills/event-scanner/references/availability-rules.md`.
+- `skills/event-scanner/references/scoring-rubric.md`.
 
 ## Procedure
 

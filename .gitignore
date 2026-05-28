@@ -1,7 +1,9 @@
-# Local user configuration
-/.agents/skills/event-scanner-run/assets/taste-profile.md
-/.agents/skills/event-scanner-run/assets/sources.md
+# Agent configuration (local only)
+/.claude/
 
-# Runtime outputs
-/.agents/skills/event-scanner-run/runs/*.md
-!/.agents/skills/event-scanner-run/runs/README.md
+# Local user configuration (personal, not shared)
+/skills/event-scanner/assets/taste-profile.md
+/skills/event-scanner/assets/sources.md
+
+# Run outputs
+/skills/event-scanner/runs/*.md

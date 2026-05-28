@@ -6,7 +6,8 @@ Turn scored candidates into the final user-facing event shortlist.
 
 - Scored candidate events from step-2-scoring.
 - Calendar-reviewed practicality notes from step-3-calendar-review when available.
-- Preference and availability rules.
+- `skills/event-scanner/assets/taste-profile.md` — for dealbreakers and final fit check.
+- `skills/event-scanner/references/scoring-rubric.md` — for recommendation labels and output format.
 - Any user-requested date window or geography.
 
 ## Procedure

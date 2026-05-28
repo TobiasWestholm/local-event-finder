@@ -11,17 +11,17 @@ Use this skill when the user wants event suggestions or asks what's happening in
 
 ## Procedure
 
-1. Follow the boot sequence in `.agents/skills/event-scanner/references/operating-model.md`.
-2. Create a new empty run note in `.agents/skills/event-scanner/runs/` before discovery starts.
+1. Follow the boot sequence in `skills/event-scanner/references/operating-model.md`.
+2. Create a new empty run note in `skills/event-scanner/runs/` before discovery starts.
 3. Add `event-scanner` to the run note's `Skills used` list immediately.
 4. Apply these pipeline steps in order:
-   - `.agents/skills/event-scanner/steps/step-1-discovery.md`
-   - `.agents/skills/event-scanner/steps/step-2-scoring.md`
-   - `.agents/skills/event-scanner/steps/step-3-calendar-review.md`
-   - `.agents/skills/event-scanner/steps/step-4-shortlist-review.md`
+   - `skills/event-scanner/steps/step-1-discovery.md`
+   - `skills/event-scanner/steps/step-2-scoring.md`
+   - `skills/event-scanner/steps/step-3-calendar-review.md`
+   - `skills/event-scanner/steps/step-4-shortlist-review.md`
 5. Produce the ranked shortlist.
 
-For explicit requests to add a specific suggested event to Google Calendar, follow `.agents/skills/event-scanner/steps/step-5-add-to-calendar.md`.
+For explicit requests to add a specific suggested event to Google Calendar, follow `skills/event-scanner/steps/step-5-add-to-calendar.md`.
 
 Read and write only within this skill's folder.
 

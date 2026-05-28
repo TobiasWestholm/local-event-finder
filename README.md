@@ -1,38 +1,57 @@
-# Local event finder
+# Event Scanner
 
-A coding agent plugin for discovering, scoring, and shortlisting events from user-provided preferences.
+A agent skill for discovering, scoring, and shortlisting local events matched to your taste profile.
 
-Supports optional calendar integration.
+Supports optional Google Calendar integration for availability checks and adding events.
+
+## How to install
+
+There are two ways to use this skill:
+
+**As a standalone project** — clone this repo and open the folder in your coding agent. The agent reads `CLAUDE.md` or `AGENTS.md` at the root and is ready to scan immediately after setup.
+
+**As a skill in an existing project** — copy the `skills/event-scanner/` folder into your project's `skills/` directory. Your agent will pick it up automatically. No other files from this repo are needed.
 
 ## Setup
 
-Open this folder in your coding agent and copy the prompt below. Replace the FILL IN YOUR PREFERENCE text with your actual preferences before sending it.
+Once installed, send the prompt below to your agent. Replace the `FILL IN` placeholders with your actual preferences before sending.
 
 ```text
-Set up the event scanner for me.
+Set up the event scanner skill for me.
 
-First create my local preference files:
+First, create my personal configuration files by copying the example files in skills/event-scanner/assets/:
+- Copy taste-profile.example.md to taste-profile.md in the same folder
+- Copy sources.example.md to sources.md in the same folder
 
-cp .agents/skills/event-scanner/assets/taste-profile.example.md .agents/skills/event-scanner/assets/taste-profile.md
-cp .agents/skills/event-scanner/assets/sources.example.md .agents/skills/event-scanner/assets/sources.md
-
-Then replace the <PLACEHOLDER> blocks in the copied files with my preferences below.
+Then replace the <PLACEHOLDER> blocks in both copied files with my preferences below.
 
 Interests to add to my taste profile:
-- (FILL IN YOUR PREFERENCE, eg ceramics, techno, traveling, italian wines, DIY, ...)
+- (FILL IN: eg ceramics, techno, traveling, italian wines, DIY, ...)
 
 Dealbreakers to add:
-- (FILL IN YOUR PREFERENCE, eg age restrictions, audience restrictions, fully booked events, ...)
+- (FILL IN: eg age restrictions, audience restrictions, fully booked events, ...)
 
-Primary sources for standard locations:
+Default location: (FILL IN: eg your home city)
 
-Default location: (FILL IN YOUR PREFERENCE: eg your home city)
-- (Optional: FILL IN YOUR PREFERENCE, list of sources where you usually find good local events, preferably URLs)
+Primary sources for my default location:
+- (FILL IN, optional: URLs where you usually find good local events)
 
-Optional additional standard location: (FILL IN YOUR PREFERENCE, eg your working location)
-- (Optional: FILL IN YOUR PREFERENCE, list of sources where you usually find good local events, preferably URLs)
+Optional additional location: (FILL IN, optional: eg your work city)
+- (FILL IN, optional: sources for that location)
 
-Optional: install the Calendar tool so the scanner can use calendar availability and add selected events when I explicitly ask.
+Optional: install the Google Calendar tool so the scanner can check availability and add events when I ask.
 
-Optional: create a weekly automation, running (FILL IN YOUR PREFERENCE, eg "weekly on Mondays at 09:00 AM, my local time zone. Find events for the next week.").
+Optional: set up a weekly automation that runs every Monday at 09:00 and finds events for the coming week.
 ```
+
+## Usage
+
+Just ask your agent for event suggestions. Examples:
+
+- *"What's on in Copenhagen this weekend?"*
+- *"Find me AI events in the next two weeks."*
+- *"Any good things to do in Paris this summer?"*
+
+The agent will invoke the `event-scanner` skill, run discovery and scoring, and return a ranked shortlist with source links and caveats. Scan results are saved to `skills/event-scanner/runs/`.
+
+To add a shortlisted event to your calendar, tell your agent explicitly: *"Add X to my calendar."*

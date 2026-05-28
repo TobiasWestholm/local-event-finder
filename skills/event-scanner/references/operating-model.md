@@ -6,11 +6,11 @@ This skill uses documents, steps, checklists, and run notes as its primary worki
 
 Read these files before every scan:
 
-1. `.agents/skills/event-scanner/references/privacy-and-access.md` — storage and access rules
-2. `.agents/skills/event-scanner/assets/sources.md` — primary sources per location; resolve scan location here
-3. `.agents/skills/event-scanner/assets/taste-profile.md` — interests, dealbreakers, and surprise signals
-4. `.agents/skills/event-scanner/references/scoring-rubric.md` — ranking factors, labels, and explanation requirements
-5. `.agents/skills/event-scanner/references/availability-rules.md` — geography, practicality caveats, calendar privacy
+1. `skills/event-scanner/references/privacy-and-access.md` — storage and access rules
+2. `skills/event-scanner/assets/sources.md` — primary sources per location; resolve scan location here
+3. `skills/event-scanner/assets/taste-profile.md` — interests, dealbreakers, and surprise signals
+4. `skills/event-scanner/references/scoring-rubric.md` — ranking factors, labels, and explanation requirements
+5. `skills/event-scanner/references/availability-rules.md` — geography, practicality caveats, calendar privacy
 
 ## Skill Pipeline
 
@@ -41,14 +41,14 @@ Read and write only within this skill's folder. Do not modify files outside it u
 
 ## Running An Event Scan
 
-1. Read the relevant references in `.agents/skills/event-scanner/references/`.
-2. Invoke `event-scanner`, which creates an empty run note in `.agents/skills/event-scanner/runs/`.
+1. Read the relevant references in `skills/event-scanner/references/`.
+2. Invoke `event-scanner`, which creates an empty run note in `skills/event-scanner/runs/`.
 3. Each pipeline step logs itself in that run note when it starts.
-4. Resolve the requested location from `.agents/skills/event-scanner/assets/sources.md`; if the user did not specify a location, use the configured default location.
+4. Resolve the requested location from `skills/event-scanner/assets/sources.md`; if the user did not specify a location, use the configured default location.
 5. Use user-listed priority sources for the requested location first, when they exist.
 6. Discover candidate events and preserve source links.
 7. Normalize candidates into comparable notes.
-8. Score candidates using `.agents/skills/event-scanner/references/scoring-rubric.md`.
+8. Score candidates using `skills/event-scanner/references/scoring-rubric.md`.
 9. Apply calendar-aware review when calendar context is available or explicitly provided.
 10. Populate the existing run note with the ranked shortlist, reasons, caveats, source links, and next actions.
 11. Remove temporary candidate, scoring, and calendar-review sections before finishing the run note.
@@ -57,7 +57,7 @@ Read and write only within this skill's folder. Do not modify files outside it u
 ## Source Handling
 
 - User-listed sources have priority.
-- Standard locations and the default location are defined in `.agents/skills/event-scanner/assets/sources.md`.
+- Standard locations and the default location are defined in `skills/event-scanner/assets/sources.md`.
 - If the user does not specify a location, use the default location.
 - If the requested location has no primary sources, explore public event sources for that location and keep source links.
 - Newly discovered sources may be used for exploration or verification, but normal scans should not propose or log new primary sources.
